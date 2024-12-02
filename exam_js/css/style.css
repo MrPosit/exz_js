@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #43AFFC;
+}
+
+::selection {
+  color: #fff;
+  background: #43AFFC;
+}
+
+.wrapper {
+  width: 450px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  font-size: 21px;
+  font-weight: 500;
+  color: #43AFFC;
+  padding: 16px 15px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+header i {
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: #43AFFC;
+  padding: 10px 0;
+}
+
+.tabs .tab {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tabs .tab.active {
+  background: #1d9ffc;
+  color: #fff;
+}
+
+section {
+  padding: 20px;
+}
+
+.today-part, .forecast-part {
+  display: none;
+}
+
+.today-part.active, .forecast-part.active {
+  display: block;
+}
+
+.today-part .brief, .forecast-part .forecast-cards {
+  margin-bottom: 20px;
+}
+
+.today-part .brief img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100px;
+}
+
+.today-part .brief p {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.today-part .brief .temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.today-part .brief .temp .deg {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.today-part .details, .forecast-part .forecast-details {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.details p, .forecast-details p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.popular-cities h3 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.popular-cities .cities {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.popular-cities .cities button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background: #43AFFC;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popular-cities .cities button:hover {
+  background: #1d9ffc;
+}
+
+.forecast-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.forecast-cards .card {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1 1 calc(30% - 10px);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.forecast-cards .card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-cards .card img {
+  max-width: 50px;
+  margin: 5px auto;
+}
+
+.forecast-cards .card p {
+  font-size: 14px;
+  color: #333;
+}
+
+.forecast-details {
+  display: none;
+  margin-top: 20px;
+}
+
+.forecast-details.active {
+  display: block;
+}

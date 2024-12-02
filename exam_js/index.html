@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Weather App</header>
+    <nav class="tabs">
+      <button class="tab today-tab active">Today</button>
+      <button class="tab forecast-tab">5-day Forecast</button>
+    </nav>
+    
+    <section class="search-part">
+      <input type="text" class="search-input" placeholder="Enter city name">
+      <button class="search-btn">Search</button>
+    </section>
+    
+    <section class="today-part">
+      <div class="brief">
+        <p class="current-date"></p>
+        <img src="" alt="Weather Icon">
+        <p class="description"></p>
+        <div class="temp">
+          <span class="numb">_</span><span class="deg">°</span>C
+        </div>
+        <p>Feels like: <span class="feels-like">_</span>°C</p>
+        <p>Sunrise: <span class="sunrise">_</span></p>
+        <p>Sunset: <span class="sunset">_</span></p>
+        <p>Day Length: <span class="day-length">_</span></p>
+      </div>
+      <div class="details"></div>
+      <div class="popular-cities">
+        <h3>Popular Cities</h3>
+        <div class="cities">
+          <button data-city="London">London</button>
+          <button data-city="New York">New York</button>
+          <button data-city="Tokyo">Tokyo</button>
+          <button data-city="Astana">Astana</button>
+        </div>
+      </div>
+    </section>
+    <section class="forecast-part">
+      <div class="forecast-cards"></div>
+      <div class="forecast-details"></div>
+    </section>
+  </div>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
